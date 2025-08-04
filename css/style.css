@@ -1,0 +1,248 @@
+:root {
+    /* Color variables */
+    --rust-clay: #A75835;
+    --warm-cream: #FFF5E7;
+    --calm-green: #9AC5A0;
+    --sky-blue: #84C5E3;
+    --mist-grey: #EDEFF1;
+    --deep-slate: #2A3E4C;
+    --white: #ffffff;
+    --black: #000000;
+    
+    /* Font variables */
+    --font-heading: 'Raleway', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    color: var(--mist-grey);
+    background-color: var(--warm-cream);
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+/* Center the navigation links */
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav {
+    width: 100%;
+    max-width: 800px; /* Adjust this value as needed */
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mist-grey);
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--deep-slate);
+    background-color: var(--calm-green); 
+    border-radius: 8px;
+}
+
+.nav-link.active {
+    color: var(--deep-slate); 
+    background-color: var(--calm-green); 
+    border-radius: 8px; 
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('../images/pexels-ezz7-979503.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    max-width: 800px;
+    margin-left: -42px;
+}
+
+.hero-content > p:last-child {
+    margin-bottom: 0;
+}
+
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 70px; /* Desktop h1 size */
+    font-weight: 800; /* extrabold */
+    color: var(--warm-cream);
+    line-height: 1.2;
+    margin-bottom: 39px;
+}
+
+.hero .lead {
+    font-family: var(--font-body);
+    font-size: 20px; /* p: satoshi, regular, 20 */
+    font-weight: 400;
+    margin-bottom: 39px;
+}
+
+.hero p {
+    font-family: var(--font-body);
+    font-size: 20px; /* p: satoshi, regular, 20 */
+    color: var(--mist-grey);
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--font-body);
+    font-weight: 700; /* bold */
+    font-size: 20px; /* buttons: satoshi, black, 20 */
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: var(--deep-slate);
+    background-color: var(--calm-green);
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--rust-clay);
+    transform: translateY(-2px);
+    color: var(--warm-cream);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) { /* Tablet */
+    .hero h1 {
+        font-size: 56px; /* Tablet h1 */
+    }
+    
+    .hero .lead,
+    .hero p {
+        font-size: 20px;
+    }
+    
+    .nav-link {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile */
+    .hero {
+        min-height: 500px;
+        text-align: left;
+    }
+    
+    .hero h1 {
+        font-size: 47px; /* Mobile h1 */
+    }
+    
+    .hero-content {
+        margin-left: -42px;
+        padding: 1rem;
+    }
+    
+    .navbar-brand img {
+        height: 50px;
+    }
+    
+    .nav-link {
+        font-size: 20px;
+    }
+}
+
+
+/* Stats Bar Section */
+.stats-bar .col-lg-4 {
+    padding: 4rem 2rem;
+}
+
+.stats-bar h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 95px;
+    margin-bottom: 0.5rem;
+}
+
+.stats-bar p {
+    font-family: var(--font-body);
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.stats-bar .badge {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .stats-bar h1 {
+        font-size: 85px;
+    }
+
+    .stats-bar p {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .stats-bar .col-lg-4 {
+        padding: 3rem 1rem;
+    }
+
+    .stats-bar h1 {
+        font-size: 70px;
+    }
+
+    .stats-bar p {
+        font-size: 24px;
+    }
+
+    .stats-bar .badge {
+        font-size: 16px;
+    }
+}
