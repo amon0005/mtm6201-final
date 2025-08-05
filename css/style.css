@@ -194,55 +194,171 @@ body {
 
 
 /* Stats Bar Section */
-.stats-bar .col-lg-4 {
-    padding: 4rem 2rem;
+.stats-bar {
+    font-family: var(--font-body);
 }
 
-.stats-bar h1 {
+/* Common Stat Block Styles */
+.stat-block {
+    min-height: 250px;
+    border-bottom-right-radius: 80px 80px;
+}
+
+.stat-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    margin-left: 55px;
+}
+
+.stat-text {
+    display: flex;
+    align-items: flex-end;
+}
+
+.stat-block h1 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 95px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
+    line-height: 0.9;
 }
 
-.stats-bar p {
-    font-family: var(--font-body);
+.stat-block p {
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
 }
 
-.stats-bar .badge {
+.badge {
     font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 900;
+    font-size: 34px;
     border-radius: 10px;
+    padding: 0.5rem 1rem;
+    position: absolute; 
+    right: 100px; 
+    bottom: 20px; 
+    width: 233px;
+    height: 66.73px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
+.stat-content {
+    position: relative; 
+}
+
+.stats-bar .stat-block.stat-1 .stat-content {
+    margin-left: 110px; 
+}
+
+.stats-bar .stat-block.stat-2 .stat-content {
+    margin-left: 195px; 
+}
+
+.stats-bar .stat-block.stat-3 .stat-content {
+    margin-left: 260px; 
+}
+
+/* Stat 1 Badge */
+.stats-bar .stat-block.stat-1 .badge {
+    right: 320px;
+}
+
+/* Stat 2 Badge - Move more left */
+.stats-bar .stat-block.stat-2 .badge {
+    right: 280px; /* Lower number = more left */
+}
+
+/* Stat 3 Badge */
+.stats-bar .stat-block.stat-3 .badge {
+    right: 230px;
+}
+
+
+/* Individual Stat Blocks */
+.stat-1 {
+    background-color: var(--rust-clay);
+}
+.stat-1 h1,
+.stat-1 p {
+    color: var(--warm-cream);
+}
+.stat-1 .badge {
+    background-color: var(--warm-cream);
+    color: var(--rust-clay);
+}
+
+.stat-2 {
+    background-color: var(--warm-cream);
+}
+.stat-2 h1,
+.stat-2 p {
+    color: var(--rust-clay);
+}
+.stat-2 .badge {
+    background-color: var(--rust-clay);
+    color: var(--warm-cream);
+}
+
+.stat-3 {
+    background-color: var(--sky-blue);
+}
+.stat-3 h1,
+.stat-3 p {
+    color: var(--deep-slate);
+}
+.stat-3 .badge {
+    background-color: var(--deep-slate);
+    color: var(--mist-grey);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 991.98px) {
-    .stats-bar h1 {
+    .stat-block h1 {
         font-size: 85px;
     }
-
-    .stats-bar p {
+    .stat-block p {
         font-size: 28px;
+    }
+    .stat-content {
+        padding: 1rem 2rem;
+        margin-left: 42px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .stats-bar .col-lg-4 {
-        padding: 3rem 1rem;
+    .stat-block {
+        min-height: 250px;
     }
-
-    .stats-bar h1 {
+    .stat-block h1 {
         font-size: 70px;
     }
-
-    .stats-bar p {
+    .stat-block p {
         font-size: 24px;
     }
-
-    .stats-bar .badge {
-        font-size: 16px;
+    .badge {
+        font-size: 25px;
+        position: relative;
+        right: auto;
+        margin-left: 0;
+        width: 180px;
+        height: 50px;
+        margin-top: 10px;
+    }
+    .stat-content {
+        padding: 1rem;
+        margin-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .stat-text {
+        margin-bottom: 1rem;
     }
 }
