@@ -1474,3 +1474,142 @@ Volunteer Spotlight Section
     margin: 0 8px;
   }
 }
+
+
+
+/* =========================
+   Adopt Page Styles
+   ========================= */
+
+
+/* For adopt page specifically */
+.adopt-page .navbar-brand img {
+    height: 140px; /* Larger for adopt page */
+    width: auto;
+}
+
+@media (max-width: 991.98px) {
+    .adopt-page .navbar-brand img {
+        height: 90px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .adopt-page .navbar-brand img {
+        height: 70px;
+    }
+}
+
+/* Navbar positioning for adopt page */
+.adopt-page .navbar {
+    padding-top: 0.5rem; /* Reduce top padding */
+    padding-bottom: 0.5rem; /* Adjust bottom padding if needed */
+}
+
+.adopt-page .navbar-brand {
+    padding-top: 0; /* Remove any top padding from brand */
+    padding-bottom: 0; /* Remove any bottom padding from brand */
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+
+.adopt-page .navbar-logo {
+    margin-top: -19px; 
+    margin-bottom: -30px; 
+}
+/* Adopt Hero Section */
+
+/* =========================
+   Hero Section with Image
+   ========================= */
+
+.adopt-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    color: var(--warm-cream);
+    overflow: hidden;
+    background-color: var(--rust-clay); /* Fallback color */
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adopt-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+/* Existing styles remain the same */
+.adopt-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--warm-cream);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.adopt-hero .lead {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--warm-cream);
+}
+
+.adopt-hero .btn-primary {
+    background-color: var(--calm-green);
+    color: var(--deep-slate);
+    border: none;
+}
+
+.adopt-hero .btn-primary:hover {
+    background-color: var(--sky-blue);
+    color: var(--deep-slate);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .adopt-hero h1 {
+        font-size: 56px;
+    }
+    
+    .adopt-hero .lead {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .adopt-hero {
+        min-height: 500px;
+        text-align: left;
+    }
+    
+    .adopt-hero h1 {
+        font-size: 47px;
+    }
+    
+    .adopt-hero-content {
+        padding: 1rem;
+    }
+    
+  
+}
