@@ -1613,3 +1613,232 @@ Volunteer Spotlight Section
     
   
 }
+
+/* =========================
+   Meet Our Adoptable Cats Section
+   ========================= */
+
+.meet-cats-section {
+    padding: 80px 0;
+    background-color: var(--warm-cream);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--rust-clay);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.viewing-count {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--deep-slate);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--deep-slate);
+    text-align: left;
+    max-width: 800px;
+    margin: 1 auto 40px;
+    line-height: 1.6;
+}
+
+.filters-container {
+     display: flex;
+     gap: 25px; 
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 7px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    background-color: var(--sky-blue);
+    color: var(--deep-slate);
+    padding: 8px 15px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter:hover {
+    background-color: var(--calm-green);
+    border-radius: 7px;
+}
+
+.dropdown-icon {
+    font-size: 14px;
+    color: var(--rust-clay);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filters-container {
+        gap: 10px;
+    }
+    
+    .filter {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .filters-container {
+        padding-bottom: 10px;
+    }
+    
+    .filter {
+        padding: 5px 10px;
+    }
+}
+.cats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cat-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cat-name {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--deep-slate);
+    margin-bottom: 5px;
+}
+
+.cat-age {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--rust-clay);
+    margin-bottom: 15px;
+}
+
+.cat-description {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--deep-slate);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cat-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.trait {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-slate);
+    background-color: var(--mist-grey);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.view-profile-btn {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: var(--rust-clay);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    background-color: var(--calm-green);
+    color: var(--deep-slate);
+}
+
+
+.cat-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 15px;
+}
+
+.cat-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cat-card:hover .cat-image {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cat-image-container {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cat-image-container {
+        height: 160px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 42px;
+    }
+    
+    .cats-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .meet-cats-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .viewing-count,
+    .section-description {
+        font-size: 16px;
+    }
+    
+    .cats-grid {
+        grid-template-columns: 1fr;
+    }
+}
