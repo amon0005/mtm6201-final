@@ -1629,7 +1629,8 @@ Volunteer Spotlight Section
     font-weight: 800;
     color: var(--rust-clay);
     margin-bottom: 20px;
-    text-align: left;
+    text-align: left; /* Changed from center to left */
+    padding: 0 20px; /* Added padding to match card alignment */
 }
 
 .viewing-count {
@@ -1637,95 +1638,150 @@ Volunteer Spotlight Section
     font-size: 20px;
     font-weight: 700;
     color: var(--deep-slate);
-    text-align: left;
+    text-align: left; /* Changed from center to left */
     margin-bottom: 15px;
+    padding: 0 20px; /* Added padding to match card alignment */
 }
 
 .section-description {
     font-family: var(--font-body);
     font-size: 18px;
     color: var(--deep-slate);
-    text-align: left;
+    text-align: left; /* Changed from center to left */
     max-width: 800px;
-    margin: 1 auto 40px;
+    margin: 0 20px 40px; 
     line-height: 1.6;
 }
 
+
 .filters-container {
-     display: flex;
-     gap: 25px; 
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .filter {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px;
+    gap: 6px;
+    padding: 8px 16px;
+    background-color: var(--sky-blue);
     border-radius: 7px;
+    cursor: pointer;
     font-family: var(--font-body);
     font-weight: 700;
-    background-color: var(--sky-blue);
     color: var(--deep-slate);
-    padding: 8px 15px;
-    cursor: pointer;
-    white-space: nowrap;
 }
 
 .filter:hover {
     background-color: var(--calm-green);
-    border-radius: 7px;
+    color: var(--deep-slate);
+    transform: 0.3s ease;
+    transform: translateY(-2px);
 }
 
 .dropdown-icon {
-    font-size: 14px;
-    color: var(--rust-clay);
+    width: 12px;
+    height: 12px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .filters-container {
-        gap: 10px;
-    }
-    
-    .filter {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .filters-container {
-        padding-bottom: 10px;
-    }
-    
-    .filter {
-        padding: 5px 10px;
-    }
-}
+/* Rest of your CSS remains exactly the same */
 .cats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .cat-card {
-    background-color: white;
+    background-color:var(--mist-grey);
     border-radius: 15px;
-    padding: 25px;
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.cat-card:nth-child(3) {
+    background-color: var(--sky-blue); /* Third card - cream */
+}
+
+/* Card 1 - Gracy */
+.cat-card:nth-child(1) {
+    background-color: var(--deep-slate); /* First card - green */
+}
+.cat-card:nth-child(1) .cat-name,
+.cat-card:nth-child(1) .cat-age,
+.cat-card:nth-child(1) .cat-description {
+    color: var(--mist-grey); 
+}
+
+
+/* Card 2 - Whiskers */
+.cat-card:nth-child(2) {
+    background-color: var(--rust-clay);
+}
+.cat-card:nth-child(2) .cat-name,
+.cat-card:nth-child(2) .cat-age,
+.cat-card:nth-child(2) .cat-description {
+    color: var(--warm-cream); 
+}
+
+
+/* Card 3 - Mochi */
+.cat-card:nth-child(3) {
+    background-color: var(--sky-blue); 
+}
+.cat-card:nth-child(3) .cat-name,
+.cat-card:nth-child(3) .cat-age,
+.cat-card:nth-child(3) .cat-description {
+    color: var(--deep-slate); 
+}
+.cat-card:nth-child(3) .trait {
+    background-color: var(--deep-slate);
+    color: var(--mist-grey);
+}
+
+.cat-traits {
+    padding: 20px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.trait {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-slate);
+    background-color: var(--calm-green);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.cat-info {
+    padding: 15px 20px;
+    flex-grow: 1;
 }
 
 .cat-name {
     font-family: var(--font-heading);
     font-size: 28px;
+    font-weight: 800;
     color: var(--deep-slate);
     margin-bottom: 5px;
 }
 
 .cat-age {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 20px;
     color: var(--rust-clay);
     margin-bottom: 15px;
 }
@@ -1738,72 +1794,48 @@ Volunteer Spotlight Section
     margin-bottom: 20px;
 }
 
-.cat-traits {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.trait {
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--deep-slate);
-    background-color: var(--mist-grey);
-    padding: 5px 15px;
-    border-radius: 20px;
-}
-
-.view-profile-btn {
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 16px;
-    color: white;
-    background-color: var(--rust-clay);
-    border: none;
-    padding: 10px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.view-profile-btn:hover {
-    background-color: var(--calm-green);
-    color: var(--deep-slate);
-}
-
-
 .cat-image-container {
-    width: 100%;
-    height: 200px;
+    position: relative;
+    height: 320px;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
-    margin-bottom: 15px;
+    border-radius: 30px 30px 0 0;
 }
 
 .cat-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    border-radius: 15px 15px 0 0;
 }
 
-.cat-card:hover .cat-image {
-    transform: scale(1.05);
+.view-profile-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; 
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--mist-grey);
+    background-color: var(--rust-clay);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .cat-image-container {
-        height: 180px;
-    }
+.view-profile-btn::after {
+    content: "→";
+    font-size: 18px;
 }
 
-@media (max-width: 576px) {
-    .cat-image-container {
-        height: 160px;
-    }
+.view-profile-btn:hover {
+    background-color: var(--sky-blue);
+    color: var(--deep-slate);
+    transform: translateY(-2px);
 }
 
 /* Responsive Adjustments */
@@ -1813,7 +1845,7 @@ Volunteer Spotlight Section
     }
     
     .cats-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 }
 
@@ -1826,6 +1858,9 @@ Volunteer Spotlight Section
         font-size: 36px;
     }
     
+    .cat-image-container {
+        height: 180px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1840,5 +1875,9 @@ Volunteer Spotlight Section
     
     .cats-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .cat-image-container {
+        height: 160px;
     }
 }
