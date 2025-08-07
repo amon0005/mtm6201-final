@@ -4,7 +4,7 @@
 **## 🔗 GitHub Pages Live Site:**
 [https://amon0005.github.io/mtm6201-final/]
 **## 📐 Design Files (Figma)**
-[Click here to view high-fidelity Figma prototype (Desktop, Tablet, Mobile)](~https://www.figma.com/design/Cf4at69MnH0clRli7sDiXV/High-fidelity-wireframes?node-id=1-5670&t=JfWFnjqrS8NNL5Fy-1~)
+Click here to view high-fidelity Figma prototype (Desktop, Tablet, Mobile)
 
 **## 🧩 Libraries & Assets Used**
 
