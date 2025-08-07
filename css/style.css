@@ -1889,8 +1889,7 @@ Volunteer Spotlight Section
    Contact Page Styles
    ====================== */
 
-   /* Contact Page Logo Size */
-   
+/* Contact Page Logo Size */
 .contact-page .navbar-logo.contact-logo {
     height: 120px; /* Larger size for contact page */
     transition: all 0.3s ease;
@@ -1908,31 +1907,40 @@ Volunteer Spotlight Section
         height: 50px; /* Mobile size */
     }
 }
+
+/* Navbar Spacing Adjustments */
 .contact-page .navbar {
-    padding-top: 0.5rem; 
-    padding-bottom: 0.5rem; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative; /* Ensure proper stacking */
+    z-index: 1000; /* Keep navbar above other content */
 }
 
 .contact-page .navbar-brand {
-    padding-top: 0; 
-    padding-bottom: 0; 
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
-
 
 .contact-page .navbar-logo {
-    margin-top: -19px; 
-    margin-bottom: -30px; 
+    margin-top: -19px;
+    margin-bottom: -30px;
 }
 
+/* Content Spacing - THIS IS THE KEY CHANGE */
+.contact-page main {
+    padding-top: 30px; /* Adds space below navbar */
+}
+
+/* Rest of your existing contact styles */
 .contact-page .navbar-nav .nav-link {
-    color: var(--deep-slate); 
+    color: var(--deep-slate);
 }
 
 .contact-page .navbar-nav .nav-link:hover,
 .contact-page .navbar-nav .nav-link.active {
-    color: var(--deep-slate); 
+    color: var(--deep-slate);
     background-color: var(--calm-green);
     border-radius: 8px;
 }
@@ -1955,7 +1963,7 @@ Volunteer Spotlight Section
 .contact-form h2 {
     font-family: var(--font-heading);
     font-weight: 800;
-    color: var(--rust-clay);
+    color: var(--deep-slate);
     margin-bottom: 30px;
 }
 
@@ -1965,7 +1973,7 @@ Volunteer Spotlight Section
 
 .contact-form h2 {
     font-size: 36px;
-    border-bottom: 2px solid var(--rust-clay);
+    border-bottom: 2px solid var(--deep-slate);
     padding-bottom: 10px;
 }
 
@@ -1978,7 +1986,7 @@ Volunteer Spotlight Section
     font-size: 24px;
     font-weight: 800;
     margin-bottom: 8px;
-    color: var(--rust-clay);
+    color: var(--deep-slate);
 }
 
 .contact-detail p {
@@ -2002,37 +2010,6 @@ Volunteer Spotlight Section
     transform: scale(1.1);
 }
 
-.quick-links {
-    margin: 30px 0;
-}
-
-.quick-links h3 {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--rust-clay);
-}
-
-.quick-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.quick-links li {
-    margin-bottom: 8px;
-}
-
-.quick-links a {
-    font-family: var(--font-body);
-    font-size: 18px;
-    color: var(--deep-slate);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.quick-links a:hover {
-    color: var(--rust-clay);
-}
 
 .contact-message {
     font-family: var(--font-body);
@@ -2108,6 +2085,24 @@ Volunteer Spotlight Section
     .contact-info {
         margin-bottom: 40px;
     }
+    
+    /* Adjust spacing for tablet */
+    .contact-page main {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Adjust logo positioning for mobile */
+    .contact-page .navbar-logo {
+        margin-top: -15px;
+        margin-bottom: -20px;
+    }
+    
+    /* Adjust spacing for mobile */
+    .contact-page main {
+        padding-top: 50px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2122,5 +2117,10 @@ Volunteer Spotlight Section
     
     .contact-form h2 {
         font-size: 28px;
+    }
+    
+    /* Final mobile spacing adjustment */
+    .contact-page main {
+        padding-top: 40px;
     }
 }
