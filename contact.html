@@ -13,33 +13,43 @@
 </head>
 <body class="contact-page">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo stray cat 3.png" alt="Ottawa Stray Cat Rescue" class="navbar-logo contact-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="adopt.html">Adopt</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Foster</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Volunteer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo-stray-cat-3.png" alt="Ottawa Stray Cat Rescue" class="navbar-logo contact-logo">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="offcanvas-backdrop"></div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="adopt.html">Adopt</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Foster</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Volunteer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Contact Page Content -->
     <main class="contact-container">
+         <!-- LEFT SIDE: Contact Info -->
         <section class="contact-info">
-            <h1>Let's get in touch</h1>
-            
+            <div class="contact-header">
+                <h1>Let's get in touch</h1>
+                <div class="contact-message-wrapper">
+                    <p class="contact-message">We're here to answer your questions and help you start your adoption journey.</p>
+                    <!-- Big arrow SVG -->
+                    <svg class="contact-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                        <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-10.976z"/>
+                    </svg>
+                </div>
+            </div>
             <div class="contact-detail">
                 <h3>Phone</h3>
                 <p>+1 (863) 358-4997</p>
@@ -48,9 +58,9 @@
             <div class="contact-detail">
                 <h3>Socials</h3>
                 <div class="social-icons">
-                    <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
-                    <a href="#"><img src="images/instagram-icon.svg" alt="Instagram"></a>
-                    <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+                    <a href="#"><img src="images/svg/facebook-blue.svg" alt="facebook"></a>
+                    <a href="#"><img src="images/svg/instagram-blue.svg" alt="instagram"></a>
+                    <a href="#"><img src="images/svg/x-blue.svg" alt="twitter"></a>
                 </div>
             </div>
             
@@ -65,10 +75,7 @@
                 Strandherd RO<br>
                 Nepean, ON, Canada<br>
                 K2J 5B1</p>
-            </div>
-            
-            
-            <p class="contact-message">We're here to answer your questions and help you start your adoption journey.</p>
+            </div>           
         </section>
 
         <section class="contact-form">
@@ -102,6 +109,72 @@
             </form>
         </section>
     </main>
+    <!-- Footer Section -->
+<div class="footer-container">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="newsletter-box p-4 mb-5 rounded-4">
+        <h4>Get the Latest <br> Rescue Updates</h4>
+        <form class="newsletter-form d-flex align-items-center mt-3">
+          <input type="email" placeholder="Your email" class="form-control me-3">
+          <button type="submit" class="btn btn-outline-light">
+            &#8594;
+          </button>
+        </form>
+      </div>
+      <div class="footer-info">
+        <div class="footer-logo">
+          <img src="images/logo-stray-cat-3.png" alt="Ottawa Stray Cat Rescue" height="95">
+        </div>
+        <div class="footer-contact-info">
+          <div class="contact-group">
+            <div class="location-group">
+              <div class="contact-item">
+                <img src="images/svg/location.svg" alt="Location" class="me-3" width="20">
+                <p>Ottawa, ON</p>
+              </div>
+              <div class="social-icons">
+                <a href="#"><img src="images/svg/instagram.svg" alt="Instagram" width="24"></a>
+                <a href="#"><img src="images/svg/x.svg" alt="X" width="24"></a>
+                <a href="#"><img src="images/svg/facebook.svg" alt="Facebook" width="24"></a>
+              </div>
+            </div>
+            <div class="contact-details">
+              <div class="contact-item">
+                <img src="images/svg/phone-flip.svg" alt="Phone" class="me-3" width="20">
+                <p>(613) 555-0123</p>
+              </div>
+              <div class="contact-item">
+                <img src="images/svg/email.svg" alt="Email" class="me-3" width="20">
+                <p>rescue@oscatr.ca</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <div class="links-column">
+              <a href="#">About</a>
+              <a href="#">Adopt</a>
+            </div>
+            <div class="links-column">
+              <a href="#">Foster</a>
+              <a href="#">Volunteer</a>
+            </div>
+            <div class="links-column">
+              <a href="#">Donate</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ottawa Stray Cat Rescue. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
